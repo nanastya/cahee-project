@@ -1,0 +1,5 @@
+.banner {
+  &__btn {
+    @include flat-btn(#ff6033);
+  }
+}

@@ -1,0 +1,9 @@
+.header {
+	padding-top: 50px;
+	&__row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
