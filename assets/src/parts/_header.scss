@@ -1,9 +1,20 @@
 .header {
-	padding-top: 50px;
-	&__row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-	}
+  height: 100vh;
+  padding-top: 50px;
+  @include bg-img('img/milk.png');
+  &__row {
+    @extend .container;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__menu-icon {
+    @include breakpoint(tb) {
+      display: none;
+    }
+  }
 }

@@ -1,38 +1,30 @@
 /*
-Error: Undefined mixin 'flat-btn'.
-        on line 3 of src/parts/_banner.scss, in `flat-btn'
-        from line 3 of src/parts/_banner.scss
-        from line 12 of src/parts/all.scss
+Error: Undefined mixin 'crossBrowser'.
+        on line 9 of src/parts/_components.scss, in `crossBrowser'
+        from line 9 of src/parts/_components.scss
+        from line 4 of src/parts/all.scss
 
-1: /*-------------------------------------------------
-2: Components
-3: -------------------------------------------------*\/
 4: @import "_components";
 5: /*-------------------------------------------------
 6: Header
 7: -------------------------------------------------*\/
 8: @import "_header";
+9: /*-------------------------------------------------
+10: Banner
+11: -------------------------------------------------*\/
+12: @import "_banner";
+13: /*-------------------------------------------------
+14: Menu
 
 Backtrace:
-src/parts/_banner.scss:3:in `flat-btn'
-src/parts/_banner.scss:3
-src/parts/all.scss:12
+src/parts/_components.scss:9:in `crossBrowser'
+src/parts/_components.scss:9
+src/parts/all.scss:4
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
@@ -92,4 +84,4 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flat-btn'.\A         on line 3 of src/parts/_banner.scss, in `flat-btn'\A         from line 3 of src/parts/_banner.scss\A         from line 12 of src/parts/all.scss\A \A 1: /*-------------------------------------------------\A 2: Components\A 3: -------------------------------------------------*/\A 4: @import \"_components\";\A 5: /*-------------------------------------------------\A 6: Header\A 7: -------------------------------------------------*/\A 8: @import \"_header\";"; }
+  content: "Error: Undefined mixin 'crossBrowser'.\A         on line 9 of src/parts/_components.scss, in `crossBrowser'\A         from line 9 of src/parts/_components.scss\A         from line 4 of src/parts/all.scss\A \A 4: @import \"_components\";\A 5: /*-------------------------------------------------\A 6: Header\A 7: -------------------------------------------------*/\A 8: @import \"_header\";\A 9: /*-------------------------------------------------\A 10: Banner\A 11: -------------------------------------------------*/\A 12: @import \"_banner\";\A 13: /*-------------------------------------------------\A 14: Menu"; }

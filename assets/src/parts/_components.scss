@@ -1,0 +1,45 @@
+//Toggle Menu
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 4em;
+  height: 4em;
+  cursor: pointer;
+  margin: 0 auto;
+  @include crossBrowser(transition, all 0.3s);
+  &__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 0.5em;
+    margin-top: -0.5em;
+    background-color: $color_1;
+    border-radius: 3px;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color_1;
+      border-radius: 3px;
+      @include crossBrowser(transition, all 0.3s);
+    }
+    &:before {
+      @include crossBrowser(transform, translateY(-1em));
+    }
+    &:after {
+      @include crossBrowser(transform, translateY(1em));
+    }
+  }
+  &--open {
+    @include crossBrowser(transform, rotate(45deg));
+    span {
+      &:before,
+      &:after {
+        @include crossBrowser(transform, rotate(90deg));
+      }
+    }
+  }
+}

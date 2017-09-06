@@ -385,7 +385,7 @@ html {
 body {
   margin: 0; }
 
-.container {
+.container, .header__row {
   max-width: 1200px;
   width: 100%;
   padding: 0 15px;
@@ -415,16 +415,78 @@ Parts
 /*-------------------------------------------------
 Components
 -------------------------------------------------*/
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 4em;
+  height: 4em;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s; }
+  .menu-icon__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 0.5em;
+    margin-top: -0.5em;
+    background-color: #ff6033;
+    border-radius: 3px; }
+    .menu-icon__line:before, .menu-icon__line:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ff6033;
+      border-radius: 3px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      transition: all 0.3s; }
+    .menu-icon__line:before {
+      -webkit-transform: translateY(-1em);
+      -moz-transform: translateY(-1em);
+      -ms-transform: translateY(-1em);
+      transform: translateY(-1em); }
+    .menu-icon__line:after {
+      -webkit-transform: translateY(1em);
+      -moz-transform: translateY(1em);
+      -ms-transform: translateY(1em);
+      transform: translateY(1em); }
+  .menu-icon--open {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    .menu-icon--open span:before, .menu-icon--open span:after {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+
 /*-------------------------------------------------
 Header
 -------------------------------------------------*/
 .header {
-  padding-top: 50px; }
+  height: 100vh;
+  padding-top: 50px;
+  background-image: url("img/milk.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
   .header__row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between;
+    position: relative; }
+  @media only screen and (min-width: 768px) {
+    .header__menu-icon {
+      display: none; } }
 
 /*-------------------------------------------------
 Banner
@@ -457,8 +519,41 @@ Menu
   margin: 0;
   padding-left: 0;
   list-style: none; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .menu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      flex-direction: column;
+      align-items: center; } }
   .menu__item {
     padding: 0 16px; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .menu__item {
+        padding: 8px 16px; } }
+    .menu__item--active {
+      position: relative; }
+      .menu__item--active:before, .menu__item:hover:before, .menu__item:last-child:hover:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 16px;
+        height: 3px;
+        width: calc(100% - 32px);
+        background-color: #ff6033; }
+    .menu__item:hover {
+      position: relative; }
+    .menu__item:last-child {
+      padding-right: 0;
+      position: relative; }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .menu__item:last-child {
+          padding-right: 16px; } }
+      .menu__item:last-child:hover:before {
+        width: calc(100% - 16px); }
   .menu__link {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
